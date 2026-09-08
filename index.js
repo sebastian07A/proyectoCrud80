@@ -1,9 +1,10 @@
 //importacion del paquete de express, tradicional(require)
 const miExpress = require("express")
+require ("dotenv").config()
 
 //creacion de mi aplicacion de express
 const miApp = miExpress()
-const miPuerto = 3333
+const miPuerto = process.env.MIPUERTO || 3333
 
 //endpoint raiz, no tiene ruta
 miApp.get("/",(req, res)=>{
